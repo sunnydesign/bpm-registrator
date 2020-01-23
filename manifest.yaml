@@ -1,0 +1,12 @@
+application:
+  name: bpm-final-logger
+  title: Logging finalized process instance in Camunda
+  author: Andrey Mokretsov
+  language:
+    - php7.2
+  depends:
+    - composer
+    - php-amqplib
+  queues:
+    in:
+      - bpm_log

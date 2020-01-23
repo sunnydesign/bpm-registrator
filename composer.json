@@ -1,0 +1,32 @@
+{
+    "name": "bpm-final-logger/bpm-final-logger",
+    "description": "Logging finalized process instance in Camunda",
+    "keywords": ["logger", "log", "final", "bpm", "camunda"],
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Andrey Mokretsov",
+            "email": "am@kubia.com",
+            "homepage": "https://gitlab.com/am20"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://lib.kubia.dev"
+        }
+    ],
+    "require" : {
+        "php": ">=7.2.0",
+        "php-amqplib/php-amqplib": "2.11.0",
+        "quancy/libs": "dev-master",
+        "quancy/interfaces": "dev-master",
+        "kubia/logger": "0.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Kubia\\Provider\\BpmFinalLogger\\": "src/Kubia/Provider/BpmFinalLogger",
+            "Kubia\\Interfaces\\": "src/Kubia/Interfaces"
+        }
+    }
+}
