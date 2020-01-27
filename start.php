@@ -76,16 +76,8 @@ while(true) {
             $provider->channels->commands->wait(null, true, 0);
             usleep(RMQ_TICK_TIMEOUT);
         }
-    } catch(AMQPRuntimeException $e) {
-        echo $e->getMessage() . PHP_EOL;
-        cleanup_connection($connection);
-        usleep(RMQ_RECONNECT_TIMEOUT);
-    } catch(\RuntimeException $e) {
-        echo "Runtime exception " . $e->getMessage() . PHP_EOL;
-        cleanup_connection($connection);
-        usleep(RMQ_RECONNECT_TIMEOUT);
-    } catch(\ErrorException $e) {
-        echo "Error exception " . $e->getMessage() . PHP_EOL;
+    } catch (\Exception $e) {
+        Logger::stdout($e->getMessage(), 'input', RMQ_QUEUE_IN, 'bpm-final-logger', 1);
         cleanup_connection($connection);
         usleep(RMQ_RECONNECT_TIMEOUT);
     }
