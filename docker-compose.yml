@@ -1,9 +1,9 @@
 version: '3'
 services:
-  ms-sms:
+  bpm-registrator:
     build: .
-    image: docker.quancy.com.sg/bpm-final-logger:${VERSION-latest}
-    container_name: bpm-final-logger
+    image: docker.quancy.com.sg/bpm-registrator:${VERSION-latest}
+    container_name: bpm-registrator
     network_mode: bridge
     restart: always
     env_file:

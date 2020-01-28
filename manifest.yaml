@@ -1,5 +1,5 @@
 application:
-  name: bpm-final-logger
+  name: bpm-registrator
   title: Logging finalized process instance in Camunda
   author: Andrey Mokretsov
   language:
@@ -10,3 +10,5 @@ application:
   queues:
     in:
       - bpm_log
+    out:
+      - bpm_events

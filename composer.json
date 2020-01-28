@@ -1,7 +1,7 @@
 {
-    "name": "bpm-final-logger/bpm-final-logger",
-    "description": "Logging finalized process instance in Camunda",
-    "keywords": ["logger", "log", "final", "bpm", "camunda"],
+    "name": "bpm-registrator/bpm-registrator",
+    "description": "Registration various events and logging finalized process instance in Camunda",
+    "keywords": ["logger", "log", "final", "bpm", "camunda", "registrator"],
     "license": "proprietary",
     "authors": [
         {
@@ -25,7 +25,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Kubia\\Provider\\BpmFinalLogger\\": "src/Kubia/Provider/BpmFinalLogger",
+            "BpmRegistrator": "src/Kubia/Provider/BpmRegistrator",
             "Kubia\\Interfaces\\": "src/Kubia/Interfaces"
         }
     }

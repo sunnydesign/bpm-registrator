@@ -2,9 +2,9 @@
 <?php
 
 /**
- * BPM Process Instance Final Logger
+ * BPM Process Instance Registrator
  *
- * Microservice for logging finalized process instance in Camunda
+ * Microservice for registration various events and logging finalized process instance in Camunda
  */
 
 sleep(1); // timeout for start through supervisor
@@ -13,7 +13,7 @@ require_once __DIR__ . '/vendor/autoload.php';
 
 // Libs
 use PhpAmqpLib\Connection\AMQPStreamConnection;
-use Kubia\Provider\BpmFinalLogger\BpmFinalLoggerProvider;
+use Kubia\Provider\BpmRegistrator\BpmRegistratorProvider;
 use Kubia\Logger\Logger;
 
 // Config
@@ -62,9 +62,9 @@ while(true) {
         $connection = new AMQPStreamConnection(RMQ_HOST, RMQ_PORT, RMQ_USER, RMQ_PASS, RMQ_VHOST, false, 'AMQPLAIN', null, 'en_US', 3.0, 3.0, null, true, 60);
         register_shutdown_function('shutdown', $connection);
 
-        Logger::stdout('Waiting for messages. To exit press CTRL+C', 'input', RMQ_QUEUE_IN,'bpm-final-logger', 0);
+        Logger::stdout('Waiting for messages. To exit press CTRL+C', 'input', RMQ_QUEUE_IN,'bpm-registrator', 0);
 
-        $provider = new BpmFinalLoggerProvider();
+        $provider = new BpmRegistratorProvider();
         $provider->setCommands($connection, RMQ_QUEUE_IN);
         $provider->setResponses($connection, RMQ_QUEUE_OUT);
 
