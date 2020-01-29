@@ -19,6 +19,6 @@ Registration various events and logging finalized process instance in Camunda
 
 - First working version of bpm-registrator
 
-[unreleased]: https://gitlab.com/quancy-core/bpm-final-logger/-/tags/1.1
-[1.1]: https://gitlab.com/quancy-core/bpm-final-logger/-/tags/1.1
-[1.0]: https://gitlab.com/quancy-core/bpm-final-logger/-/tags/1.0
+[unreleased]: https://gitlab.com/quancy-core/bpm-registrator/-/tags/1.1
+[1.1]: https://gitlab.com/quancy-core/bpm-registrator/-/tags/1.1
+[1.0]: https://gitlab.com/quancy-core/bpm-registrator/-/tags/1.0

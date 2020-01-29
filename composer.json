@@ -25,7 +25,7 @@
     },
     "autoload": {
         "psr-4": {
-            "BpmRegistrator": "src/Kubia/Provider/BpmRegistrator",
+            "Kubia\\Provider\\BpmRegistrator\\": "src/Kubia/Provider/BpmRegistrator",
             "Kubia\\Interfaces\\": "src/Kubia/Interfaces"
         }
     }

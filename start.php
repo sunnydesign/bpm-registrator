@@ -77,7 +77,7 @@ while(true) {
             usleep(RMQ_TICK_TIMEOUT);
         }
     } catch (\Exception $e) {
-        Logger::stdout($e->getMessage(), 'input', RMQ_QUEUE_IN, 'bpm-final-logger', 1);
+        Logger::stdout($e->getMessage(), 'input', RMQ_QUEUE_IN, 'bpm-registrator', 1);
         cleanup_connection($connection);
         usleep(RMQ_RECONNECT_TIMEOUT);
     }

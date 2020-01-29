@@ -5,7 +5,7 @@ Logging finalized process instance in Camunda
 ## Docker images
 | Docker image | Version tag | Date of build |
 | --- | --- | --- |
-| docker.quancy.com.sg/bpm-final-logger | latest | 2020-01-23 |
+| docker.quancy.com.sg/bpm-registrator | latest | 2020-01-23 |
 
 ## Queues
 - Incoming queue: `bpm_log`
@@ -33,7 +33,7 @@ Logging finalized process instance in Camunda
 
 ## Installation
 ```
-git clone https://gitlab.com/quancy-core/bpm-final-logger.git
+git clone https://gitlab.com/quancy-core/bpm-registrator.git
 ```
 
 ## Build and run as docker container
